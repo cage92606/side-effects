@@ -29,12 +29,13 @@ function listDatetime(items) {
 
 document.addEventListener('DOMContentLoaded', listDatetimeWhenLoaded);
 
-function listDatetimeWhenLoaded(){
+function listDatetimeWhenLoaded(e){
   data.items = JSON.parse(localStorage.getItem('items'));
   //localStorage.setItem('items', JSON.stringify(data.items));
   if(data.items!==null){
     listDatetime(data.items);
   }
+  e.preventDefault();
 };
 
 function clearInputs(){
