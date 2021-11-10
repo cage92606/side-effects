@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- from Materialize CSS's CDN, Content Delivery Network -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- from Bootstrap Font-Awesome CSS's CDN, Content Delivery Network -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <br>
+  <div class="container">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">BM Time</span>
+        <form class="col">
+          <div class="row">
+            <div class="input-field col s6">
+              <input type="text" placeholder="Add Memo" id="memo">
+              <label for="memo">Memo</label>
+            </div>
+              <!-- <p>
+                <label>
+                  <input name="flag" type="radio"  value="nothing" id="nothing"/>
+                  <span>Nothing</span>
+                </label>
+              </p> -->
+              <p>
+                <label>
+                  <input name="flag" type="radio" value="diarrhea" id="diarrhea"/>
+                  <span>Diarrhea</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="flag" type="radio" value="constipation" id="constipation"/>
+                  <span>Constipation</span>
+                </label>
+              </p>
+            </div> 
+            <button class="add-btn btn blue darken-3"><i class="fa fa-plus"></i> Add Time</button> 
+        </form>
+      </div>
+    </div>
+    <!-- Item List -->
+    <ul id="item-list" class="collection">
+      <!-- <li id="item-0" class="collection-item">
+        <strong>Steak Dinner: </strong><em>1200 Calories</em> 
+        <a href="#" class="secondary-content">
+          <i class="edit-item fa fa-pencil"></i>
+        </a>
+      </li>
+      <li id="item-0" class="collection-item">
+        <strong>Cookies: </strong><em>400 Calories</em>  
+        <a href="#" class="secondary-content">
+          <i class="edit-item fa fa-pencil"></i>
+        </a>
+      </li>
+      <li id="item-0" class="collection-item">
+        <strong>Eggs: </strong><em>300 Calories</em> 
+        <a href="#" class="secondary-content">
+          <i class="edit-item fa fa-pencil"></i>
+        </a>
+      </li> -->
+    </ul>
+  </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="locModal" tabindex="-1" role="dialog" aria-labelledby="locModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="locModalLabel">Choose Location</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="w-form">
+              <div class="form-group">
+                <label for="city">City</label> <!-- write "label" and tab-->
+                <input type="text" id="city" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="state">State</label> <!-- write "label" and tab-->
+                <input type="text" id="state" class="form-control">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="w-change-btn" type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+  <!-- from Materialize CSS's CDN, Content Delivery Network -->
+  <!-- this also needs JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="app4.js"></script>
+</body>
+</html>
